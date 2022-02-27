@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Webbutveckling_med_.NET___Moment_3._2.Data;
 
@@ -10,9 +11,10 @@ using Webbutveckling_med_.NET___Moment_3._2.Data;
 namespace Webbutveckling_med_.NET___Moment_3._2.Migrations
 {
     [DbContext(typeof(CDContext))]
-    partial class CDContextModelSnapshot : ModelSnapshot
+    [Migration("20220227124035_BorrowUpdate")]
+    partial class BorrowUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0-preview.1.22076.6");

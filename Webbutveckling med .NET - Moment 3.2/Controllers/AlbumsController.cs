@@ -21,9 +21,16 @@ namespace Webbutveckling_med_.NET___Moment_3._2.Controllers
         }
 
         // GET: Albums
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Album.ToListAsync());
+            var albums = await _context.Album.Include(x => x.Artist).ToListAsync();
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                albums = albums.Where(x => x.Name.ToUpper()!.Contains(searchString.ToUpper())).ToList();               
+            }
+
+            return View(albums);
         }
 
         // GET: Albums/Details/5

@@ -1,4 +1,5 @@
-﻿namespace Webbutveckling_med_.NET___Moment_3._2.Models
+﻿
+namespace Webbutveckling_med_.NET___Moment_3._2.Models
 {
     public class AlbumView
     {
